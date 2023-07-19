@@ -111,7 +111,7 @@ class BetaTCVAE(VAE):
         )  # [B]
 
         log_prior = self._compute_log_gauss_density(
-            z, torch.zeros_like(z), torch.zeros_like(z)
+            z, torch.zeros_like(z), torch.ones_like(z)
         ).sum(
             dim=-1
         )  # [B]
